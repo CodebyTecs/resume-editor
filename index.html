@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graham Hunt Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="resume-container">
+
+        <div class="header">
+            <div class="profile">
+                <div class="profile-image-container">
+                    <img id="profile-pic" src="https://via.placeholder.com/80" alt="Profile Picture">
+                    <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+                </div>
+                <div class="profile-info">
+                    <h1 contenteditable="true">GRAHAM HUNT</h1>
+                    <p contenteditable="true">BRAND/LOGO DESIGNER</p>
+                </div>
+            </div>
+            <div class="languages">
+                <h3>LANGUAGES</h3>
+                <div class="language-list">
+                    <span contenteditable="true">English</span>
+                    <span contenteditable="true">Spanish</span>
+                    <span contenteditable="true">French</span>
+                </div>
+                <button class="add-btn hide-on-export" onclick="addLanguage()">Add Language</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="section education">
+                    <h3>EDUCATION</h3>
+                    <div class="education-list">
+                        <div class="item">
+                            <span class="year" contenteditable="true">2024</span>
+                            <p contenteditable="true">UX/UI<br>#UX #UI #RESEARCH #DESIGNSYSTEM #AGILE #WIREFRAMING #FIGMA #IA<br>Neoland</p>
+                        </div>
+                        <div class="item">
+                            <span class="year" contenteditable="true">2022</span>
+                            <p contenteditable="true">PRODUCT DESIGNER #ANALYTICS #RESEARCH #PROTOTYPE #WIREFRAMES #IA<br>Coursera</p>
+                        </div>
+                        <div class="item">
+                            <span class="year" contenteditable="true">2017-2021</span>
+                            <p contenteditable="true">GRAPHIC DESIGN #BRANDING #WEB #ILLUSTRATION #ADOBE<br>Cal Institute of the Arts</p>
+                        </div>
+                    </div>
+                    <button class="add-btn hide-on-export" onclick="addEducation()">Add Education</button>
+                </div>
+
+                <div class="section tools">
+                    <h3>TOOLS</h3>
+                    <div class="tools-list">
+                        <span contenteditable="true">Figma</span>
+                        <span contenteditable="true">Sketch</span>
+                        <span contenteditable="true">Notion</span>
+                        <span contenteditable="true">Miro</span>
+                        <span contenteditable="true">Google Analytics</span>
+                    </div>
+                    <button class="add-btn hide-on-export" onclick="addTool()">Add Tool</button>
+                    <h4>NO-CODE</h4>
+                    <div class="no-code-tools-list">
+                        <span contenteditable="true">Webflow</span>
+                        <span contenteditable="true">Wordpress</span>
+                        <span contenteditable="true">Framer</span>
+                    </div>
+                    <button class="add-btn hide-on-export" onclick="addNoCodeTool()">Add No-Code Tool</button>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="section interests">
+                    <h3>INTERESTS</h3>
+                    <div class="interest-tags">
+                        <span contenteditable="true">branding</span>
+                        <span contenteditable="true">brand identity</span>
+                        <span contenteditable="true">logo</span>
+                        <span contenteditable="true">typography</span>
+                        <span contenteditable="true">photography</span>
+                        <span contenteditable="true">designing</span>
+                        <span contenteditable="true">poster design</span>
+                        <span contenteditable="true">research</span>
+                        <span contenteditable="true">social networks</span>
+                        <span contenteditable="true">illustration</span>
+                    </div>
+                    <button class="add-btn hide-on-export" onclick="addInterest()">Add Interest</button>
+                </div>
+
+                <div class="section contact">
+                    <h2 contenteditable="true">LET'S CHAT! I'M READY TO WORK ON EXCITING PROJECTS</h2>
+                    <p contenteditable="true">ivann19bj@gmail.com | +34 666 666 666</p>
+                </div>
+
+                <div class="section experience">
+                    <h3>EXPERIENCE</h3>
+                    <div class="experience-list">
+                        <div class="item">
+                            <span class="date" contenteditable="true">Jul. 2023 - Ago. 2023</span>
+                            <h4 contenteditable="true">SENIOR GRAPHIC DESIGNER</h4>
+                            <p contenteditable="true">Pinnacle | Full-time</p>
+                            <ul>
+                                <li contenteditable="true">Research and brainstorm various design ideas for content and marketing.</li>
+                                <li contenteditable="true">Reviewing the work submitted by the Junior Designers and sharing feedback.</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <span class="date" contenteditable="true">Ene. 2021 - Jul. 2023</span>
+                            <h4 contenteditable="true">GRAPHIC / WEB DESIGNER</h4>
+                            <p contenteditable="true">Double Square | Full-time</p>
+                            <ul>
+                                <li contenteditable="true">Development of internal projects from scratch, product design of brands.</li>
+                                <li contenteditable="true">Landing page, webapps and hybrid apps taking decisions with stakeholders for the future of products such as Beagle labs, myur...</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <span class="date" contenteditable="true">Feb. 2021 - Jul. 2023</span>
+                            <h4 contenteditable="true">GRAPHIC DESIGNER</h4>
+                            <p contenteditable="true">Freelance</p>
+                            <ul>
+                                <li contenteditable="true">Visual design for EVENTS, Brands and Products.</li>
+                                <li contenteditable="true">Product design, Packaging Design, LOGO DESIGN.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="add-btn hide-on-export" onclick="addExperience()">Add Experience</button>
+                </div>
+            </div>
+        </div>
+        <button class="download-btn hide-on-export">Download as PDF</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
